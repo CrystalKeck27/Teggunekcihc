@@ -15,17 +15,20 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import xyz.crystaline.teggunnekcihc.setup.Registration;
 
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("teggunekcihc")
+@Mod(Teggunekcihc.MOD_ID)
 public class Teggunekcihc
 {
+    public static final String MOD_ID = "teggunekcihc";
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
     public Teggunekcihc() {
+        Registration.register();
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -54,7 +57,7 @@ public class Teggunekcihc
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
         // some example code to dispatch IMC to another mod
-        InterModComms.sendTo("teggunekcihc", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
+        InterModComms.sendTo(MOD_ID, "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
     }
 
     private void processIMC(final InterModProcessEvent event)
