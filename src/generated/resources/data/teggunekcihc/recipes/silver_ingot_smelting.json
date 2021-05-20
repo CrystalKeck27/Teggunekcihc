@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "teggunekcihc:silver_block"
+  },
+  "result": "teggunekcihc:silver_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

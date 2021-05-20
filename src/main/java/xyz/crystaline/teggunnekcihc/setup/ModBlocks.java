@@ -17,12 +17,14 @@ public class ModBlocks {
             new Block(AbstractBlock.Properties.of(Material.STONE)
                     .harvestLevel(2)
                     .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)
                     .strength(3, 10)));
     public static final RegistryObject<Block> SILVER_BLOCK = register("silver_block", () ->
             new Block(AbstractBlock.Properties.of(Material.METAL)
                     .harvestLevel(2)
                     .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
                     .sound(SoundType.METAL)
                     .strength(3, 10)));
 
