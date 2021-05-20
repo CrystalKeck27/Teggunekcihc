@@ -29,6 +29,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         builder(itemGenerated, "silver_ingot");
         builder(itemGenerated, "trash");
+        builder(itemGenerated, "butcher_knife");
     }
 
     private ItemModelBuilder builder(ModelFile itemGenerated, String name) {
