@@ -12,6 +12,7 @@ import net.minecraftforge.fml.RegistryObject;
 
 import java.util.function.Supplier;
 
+@SuppressWarnings("unused")
 public class ModBlocks {
     public static final RegistryObject<Block> SILVER_ORE = register("silver_ore", () ->
             new Block(AbstractBlock.Properties.of(Material.STONE)
