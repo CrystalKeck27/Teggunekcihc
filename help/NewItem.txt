@@ -1,0 +1,13 @@
+How to make a new item:
+
+    1. Make a new static final RegistryObject in ModItems.
+
+    2. Make a call to builder in registerModels in ModItemModelProvider. Use the same itemGenerated.
+
+    3. Add the item texture to src/main/resources/assets/teggunekcihc/textures/item. Be sure to name the file appropriately.
+
+    4. Update src/main/resources/assets/teggunekcihc/lang/en_us.json. Please keep groupings nice and put the item by the other items.
+
+    5. Make required calls to tag in addTags in ModItemTagsProvider.
+
+    6. runData, then runClient to make sure the item is in the game.
