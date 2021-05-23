@@ -30,10 +30,10 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_item", has(ModItems.SILVER_INGOT.get()))
                 .save(consumer);
 
-        CookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.SILVER_BLOCK.get()), ModItems.SILVER_INGOT.get(), 0.7f, 200)
+        CookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.SILVER_ORE.get()), ModItems.SILVER_INGOT.get(), 0.7f, 200)
                 .unlockedBy("has_item", has(ModBlocks.SILVER_ORE.get()))
                 .save(consumer, name("silver_ingot_smelting"));
-        CookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.SILVER_BLOCK.get()), ModItems.SILVER_INGOT.get(), 0.7f, 200)
+        CookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.SILVER_ORE.get()), ModItems.SILVER_INGOT.get(), 0.7f, 100)
                 .unlockedBy("has_item", has(ModBlocks.SILVER_ORE.get()))
                 .save(consumer, name("silver_ingot_blasting"));
     }
