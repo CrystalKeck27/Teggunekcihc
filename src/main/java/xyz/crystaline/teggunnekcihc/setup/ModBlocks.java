@@ -9,6 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
+import xyz.crystaline.teggunnekcihc.block.trashcompactor.TrashCompactorBlock;
 
 import java.util.function.Supplier;
 
@@ -28,6 +29,10 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.METAL)
                     .strength(3, 10)));
+    public static final RegistryObject<TrashCompactorBlock> TRASH_COMPACTOR = register("trash_compactor", () ->
+            new TrashCompactorBlock(AbstractBlock.Properties.of(Material.METAL)
+            .strength(4, 20)
+            .sound(SoundType.METAL)));
 
     static void register() {
     }
