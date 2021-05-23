@@ -14,8 +14,10 @@ public class ModItems {
             new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
     public static final RegistryObject<Item> BUTCHER_KNIFE = Registration.ITEMS.register("butcher_knife", () ->
             new SwordItem(ItemTier.IRON, 0, -2.4F, (new Item.Properties()).tab(ItemGroup.TAB_COMBAT)));
-    public static final RegistryObject <Item> CHICKEN_NUGGET = Registration.ITEMS.register("chicken_nugget", () ->
+    public static final RegistryObject<Item> CHICKEN_NUGGET = Registration.ITEMS.register("chicken_nugget", () ->
             new Item(new Item.Properties().tab(ItemGroup.TAB_FOOD).food(ModFoods.CHICKEN_NUGGET)));
+    public static final RegistryObject<Item> CHEEZ_IT =Registration.ITEMS.register("cheez_it", () ->
+            new Item(new Item.Properties().tab(ItemGroup.TAB_FOOD).food(ModFoods.CHEEZ_IT)));
 
     static void register() {}
 }
